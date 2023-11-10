@@ -8,10 +8,10 @@ Student Names: | Christian | Student 2 |  |
 
 November 2023
 
-| Date        | Christian | Student 2 |  |
+| Date        | Christian | Student 2 |
 |-------------|-----------|-----------|-----------|
-| Nov 8 (Wed) |           |           |           |
-| Nov 10 (Fri)|     X      |           |           |
+| Nov 8 (Wed) |     X     |      X    |           |
+| Nov 10 (Fri)|     X     |      X    |           |
 | Nov 15 (Wed)|           |           |           |
 | Nov 17 (Fri)|           |           |           |
 | Nov 22 (Wed) |       |           |           |  <!-- Skipped for Thanksgiving -->
