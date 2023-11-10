@@ -3,15 +3,15 @@
 Class Sign-In Sheet
 Each student should put an 'X' under their name on the days they attend class.
 
-Student Names: | Student 1 | Student 2 | Student 3 |
+Student Names: | Christian | Student 2 |  |
 ------------------|-----------|-----------|-----------|
 
 November 2023
 
-| Date        | Student 1 | Student 2 | Student 3 |
+| Date        | Christian | Student 2 |  |
 |-------------|-----------|-----------|-----------|
 | Nov 8 (Wed) |           |           |           |
-| Nov 10 (Fri)|           |           |           |
+| Nov 10 (Fri)|     X      |           |           |
 | Nov 15 (Wed)|           |           |           |
 | Nov 17 (Fri)|           |           |           |
 | Nov 22 (Wed) |       |           |           |  <!-- Skipped for Thanksgiving -->
@@ -19,7 +19,7 @@ November 2023
 
 December 2023
 
-| Date        | Student 1 | Student 2 | Student 3 |
+| Date        | Christian | Student 2 |  |
 |-------------|-----------|-----------|-----------|
 | Nov 29 (Wed)|           |           |           |
 | Dec 1 (Fri) |           |           |           |
