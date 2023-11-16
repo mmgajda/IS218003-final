@@ -37,3 +37,14 @@
     - Revenues and profits are soley based on resale
     - Sales from companies they carry could undermine market share
     - If buyers want to try on they will go to competitor, such as department store or designer boutiques
+  
+## Urban Outfitters (The Explorer and the innocent)
+
+1. Strengths
+   - Having a social media presence, providing free shipping for items above $75. giving the option to either return any items bought or exchange for something else, providing a rewards system by having people sign up using their email.
+2. Weakness
+   - needs to improve store policies
+3. Opportunity
+   - making a community through the creativity of others
+4. Threats
+   - racial profiling
