@@ -11,7 +11,7 @@
   - A lot of competition from other major brands and smaller niche companies with better QA and testing.
 3. Opportunities
     - Possible expansion into athletic goods/products that are currently not carried.
-    - Innovation in underperforming lines.  An example is how the Vaporfly 4% revitalized the Nike running line in 2017.
+    - Innovation in under performing lines.  An example is how the Vaporfly 4% revitalized the Nike running line in 2017.
 4. Threats
     - Discerning and budget-conscious consumers may take business to competitors.
     - Large presence equates with large potential for investigation and resulting bad press.  Recurring bad press about business and labor practices is likely to occur again.
@@ -34,7 +34,7 @@
     - More end clothing specific items
     - Expanding product offerings to appeal to different demographics
 4. Threats
-    - Revenues and profits are soley based on resale
+    - Revenues and profits are solely based on resale
     - Sales from companies they carry could undermine market share
     - If buyers want to try on they will go to competitor, such as department store or designer boutiques
   
