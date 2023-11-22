@@ -14,8 +14,8 @@ November 2023
 | Nov 10 (Fri)|     X     |      X    |
 | Nov 15 (Wed)|     X     |      X    |
 | Nov 17 (Fri)|     X     |      X    |
-| Nov 22 (Wed)|           |           |<!-- Skipped for Thanksgiving -->
-| Nov 24 (Fri)|           |           |<!-- Skipped for Thanksgiving -->
+| Nov 22 (Wed)|           |      X    |<!-- Skipped for Thanksgiving -->
+| Nov 24 (Fri)|  T-giving |  T-giving |<!-- Skipped for Thanksgiving -->
 
 December 2023
 
