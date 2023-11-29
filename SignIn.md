@@ -21,7 +21,7 @@ December 2023
 
 | Date        | Christian | Student 2 |
 |-------------|-----------|-----------|
-| Nov 29 (Wed)|           |           |
+| Nov 29 (Wed)|      X    |     X     |
 | Dec 1 (Fri) |           |           |
 | Dec 6 (Wed) |           |           |
 | Dec 8 (Fri) |           |           |
