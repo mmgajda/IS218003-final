@@ -18,13 +18,12 @@ import { link as linkStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
-
+import Image from "next/image";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
 	SearchIcon, TikTokIcon,
 } from "@/components/icons";
-
-import { Logo } from "@/components/icons";
+import Logo from "@/public/Logo.svg";
 
 export const Navbar = () => {
 	const searchInput = (
@@ -52,8 +51,9 @@ export const Navbar = () => {
 		<NextUINav maxWidth="xl" position="sticky">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
+				
 					<NextLink className="flex justify-start items-center gap-1" href="/">
-						<Logo />
+					<Image src={ Logo } alt="Explorer Clothing Logo" height={24} width={24} />
 						<p className="font-bold text-inherit">EXPLORER CLOTHING</p>
 					</NextLink>
 				</NavbarBrand>
