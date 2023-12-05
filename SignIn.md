@@ -19,10 +19,10 @@ November 2023
 
 December 2023
 
-| Date        | Christian | Student 2 |
+| Date        | Christian |   Maciej  |
 |-------------|-----------|-----------|
 | Nov 29 (Wed)|      X    |     X     |
-| Dec 1 (Fri) |           |           |
+| Dec 1 (Fri) |           |     X     |
 | Dec 6 (Wed) |           |           |
 | Dec 8 (Fri) |           |           |
 | Dec 13 (Wed)|           |           |
