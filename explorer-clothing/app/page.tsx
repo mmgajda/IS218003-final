@@ -12,14 +12,6 @@ export default function Home() {
 			<div className="inline-block max-w-lg text-center justify-center">
 				<Hero/>
 			</div>
-
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
 		</section>
 	);
 }
