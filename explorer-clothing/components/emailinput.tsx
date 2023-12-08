@@ -9,7 +9,7 @@ const MailchimpForm: React.FC = () => {
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            const response = await fetch('@/api/subscribe', {
+            const response = await fetch("/api/subscribe", {
                 method: 'POST',
                 body: JSON.stringify({ email }),
                 headers: {
