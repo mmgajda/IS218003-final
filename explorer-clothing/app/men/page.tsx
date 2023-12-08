@@ -3,7 +3,7 @@ import { title } from "@/components/primitives";
 export default function AboutPage() {
 	return (
 		<div>
-			<h1 className={title()}>Men's Clothing</h1>
+			<h1 className={title()}>Men&apos;s Clothing</h1>
 		</div>
 	);
 }
