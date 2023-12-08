@@ -8,8 +8,6 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
 
@@ -20,9 +18,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-	SearchIcon, TikTokIcon,
-} from "@/components/icons";
+import { SearchIcon } from "@/components/icons";
 import Logo from "@/public/Logo.svg";
 
 export const Navbar = () => {
@@ -33,11 +29,6 @@ export const Navbar = () => {
 				inputWrapper: "bg-default-100",
 				input: "text-sm",
 			}}
-			endContent={
-				<Kbd className="hidden lg:inline-block" keys={["command"]}>
-					K
-				</Kbd>
-			}
 			labelPlacement="outside"
 			placeholder="Search..."
 			startContent={

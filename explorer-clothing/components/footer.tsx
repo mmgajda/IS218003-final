@@ -29,7 +29,7 @@ export const Footer = () => {
 
     return (
         <FooterNav>
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="hidden sm:flex content-center gap-2">
                     <Link isExternal href={siteConfig.links.instagram} aria-label="Instagram">
                         <InstagramIcon className="text-default-500" />
                     </Link>
