@@ -9,6 +9,7 @@ import { Link } from "@nextui-org/link";
 import GoogleAnalytics from "@/components/googleanalytics";
 import PrivacyBanner from "@/components/privacybanner";
 import clsx from "clsx";
+import MailchimpForm from "@/components/emailinput";
 
 export const metadata: Metadata = {
 	title: {
@@ -48,11 +49,13 @@ export default function RootLayout({
 						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
 							{children}
 							<PrivacyBanner/>
+							<div>
+								<MailchimpForm/>
+							</div>
 						</main>
-						<footer className="w-full flex items-center justify-center py-3">
-							<Footer />
+						<footer className="flex flex-col mx-auto py-3">
+								<Footer />
 						</footer>
-						
 					</div>
 				</Providers>
 			</body>
