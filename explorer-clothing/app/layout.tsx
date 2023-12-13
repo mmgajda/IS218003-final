@@ -1,15 +1,17 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
+import Head from "next/head";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Link } from "@nextui-org/link";
 import GoogleAnalytics from "@/components/googleanalytics";
 import PrivacyBanner from "@/components/privacybanner";
 import clsx from "clsx";
-import MailchimpForm from "@/components/emailinput";
+import Image from "next/image";
+import bgimage from "@/public/bg.png";
+
 
 export const metadata: Metadata = {
 	title: {
@@ -17,16 +19,23 @@ export const metadata: Metadata = {
 		template: `%s - ${siteConfig.name}`,
 	},
 	description: siteConfig.description,
-	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "white" },
-		{ media: "(prefers-color-scheme: dark)", color: "black" },
-	],
+	themeColor:[
+	{ media: "(prefers-color-scheme: light)", color: "white" },
+	{ media: "(prefers-color-scheme: dark)", color: "black" },
+],
 	icons: {
 		icon: "/favicon.ico",
 		shortcut: "/favicon-16x16.png",
 		apple: "/apple-touch-icon.png",
 	},
 };
+
+export const viewport = {
+	themeColor: [
+		{ media: "(prefers-color-scheme: light)", color: "white" },
+		{ media: "(prefers-color-scheme: dark)", color: "black" },
+	],
+}
 
 export default function RootLayout({
 	children,
@@ -35,25 +44,28 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<head />
+			<head>
 			<GoogleAnalytics GA_MEASUREMENT_ID="G-P6P117GN3H"/>
+			</head>
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen bg-background font-sans antialiased relative",
 					fontSans.variable
 				)}
 			>
+
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col h-screen">
+					<div className="z-10 relative flex flex-col h-screen">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+						<div className="flex justify-center items-center">
+							<Image src={bgimage} alt="A light-colored marble pattern with dark veins." className="relative inset-y-0 z-0"/>
+						</div>
+						
+						<main className="absolute container mx-auto max-w-7xl pt-16 px-6 flex-grow z-10">
 							{children}
 							<PrivacyBanner/>
-							<div>
-								<MailchimpForm/>
-							</div>
 						</main>
-						<footer className="flex flex-col mx-auto py-3">
+						<footer className="relative bottom-0 flex flex-col mx-auto py-3">
 								<Footer />
 						</footer>
 					</div>
