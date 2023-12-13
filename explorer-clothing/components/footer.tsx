@@ -8,28 +8,24 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-
-import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
-import NextLink from "next/link";
 import {
     InstagramIcon,
 	TwitterIcon,
     TikTokIcon
 } from "@/components/icons";
+import MailchimpForm from "./emailinput";
 
 export const Footer = () => {
-    // const signUp = (
-
-    // );
-
     return (
-        <FooterNav>
-        <NavbarItem className="hidden sm:flex content-center gap-2">
+		<div className="max-w-[1200px] gap-10 grid grid-rows-4 px-8 items-center">
+			
+        <FooterNav className="items-center">
+			<div className="w-[400px]">
+		<MailchimpForm/>
+			</div>
+        <NavbarItem className="mx-4 content-center gap-10">
                     <Link isExternal href={siteConfig.links.instagram} aria-label="Instagram">
                         <InstagramIcon className="text-default-500" />
                     </Link>
@@ -41,5 +37,6 @@ export const Footer = () => {
 					</Link>
 				</NavbarItem>
                 </FooterNav>
+		</div>
     )
 };

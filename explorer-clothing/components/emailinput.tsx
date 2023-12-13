@@ -36,8 +36,11 @@ const MailchimpForm: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div id="subscribe-form" className='flex flex-col items-center my-10'>
+            <p>Be the First to Know About the Latest Releases</p>
+        <form onSubmit={handleSubmit} className="flex items-center">
             <Input
+            style={{ backgroundColor: "#d3d3d3"}}
                 isClearable
                 variant='bordered'
                 type='email'
@@ -50,10 +53,11 @@ const MailchimpForm: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 onClear={() => setEmail("")}
             />
-            <Button type="submit" color="secondary" size="lg">
+            <Button type="submit" color="primary" size="lg" className="ml-2">
                 Subscribe
             </Button>
         </form>
+        </div>
     );
 };
 
