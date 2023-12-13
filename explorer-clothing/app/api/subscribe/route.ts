@@ -38,7 +38,7 @@ mailchimp.setConfig({
     server: process.env.MAILCHIMP_SERVER_PREFIX,
 });
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function (req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
@@ -52,7 +52,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-        await mailchimp.lists.addListMember('your_mailchimp_list_id', {
+        await mailchimp.lists.addListMember(process.env.MAILCHIMP_AUDIENCE_ID, {
             email_address: email,
             status: 'subscribed',
         });
