@@ -32,23 +32,33 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import 'dotenv/config';
 import mailchimp from '@mailchimp/mailchimp_marketing';
+import { NextRequest, NextResponse } from 'next/server';
 
 mailchimp.setConfig({
     apiKey: process.env.MAILCHIMP_API_KEY,
     server: process.env.MAILCHIMP_SERVER_PREFIX,
 });
 
-async function handler(req: NextApiRequest, res: NextApiResponse) {
+async function handler(req: NextRequest, res: NextRequest) {
     if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
+        return new NextResponse(JSON.stringify({ error: 'Method not allowed' }), {
+            status: 405,
+        });
     }
 
-    const { email } = req.body;
+    const email = req.body;
 
     console.log('Request received in /api/subscribe');
 
-    if (!email || !email.includes('@')) {
-        return res.status(400).json({ error: 'Email is required and should be valid.' });
+    const emailRegex = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+
+    if (!email || !emailRegex.test(`{email}`)) {
+        console.log('Invalid email address');
+        return new NextResponse(JSON.stringify({ error: "Email is required and should be valid." }), {
+            status: 400,
+        })
+    } else {
+        console.log('Valid email address');
     }
 
     try {
@@ -57,10 +67,14 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
             status: 'subscribed',
         });
         console.log("Subscriber success");
-        return res.status(200).json({ message: 'Success! You are now subscribed.' });
+        return new NextResponse(JSON.stringify({ message: 'Success! You are now subscribed.' }), {
+            status: 200,
+        })
     } catch (error: any) {
         console.error('Mailchimp API error: ', error);
-        return res.status(500).json({ error: error.message || 'Something went wrong' });
+        return new NextResponse(JSON.stringify({ error: error.message || 'Something went wrong' }), {
+            status: 500,
+        })
     }
 }
 export { handler as POST };
