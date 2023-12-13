@@ -25,6 +25,6 @@ December 2023
 | Dec 1 (Fri) |           |     X     |
 | Dec 6 (Wed) |     X     |     X     |
 | Dec 8 (Fri) |     X     |     X     |
-| Dec 13 (Wed)|           |           |
+| Dec 13 (Wed)|           |     X     |
 
 Instructions: Please place an 'X' in the cell under your name corresponding to the dates you attend class.
