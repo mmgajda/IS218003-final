@@ -9,7 +9,7 @@ const MailchimpForm: React.FC = () => {
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            const response = await fetch('@/api/subscribe', {
+            const response = await fetch("/api/subscribe", {
                 method: 'POST',
                 body: JSON.stringify({ email }),
                 headers: {
@@ -36,8 +36,11 @@ const MailchimpForm: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div id="subscribe-form" className='flex flex-col items-center my-10'>
+            <p>Be the First to Know About the Latest Releases</p>
+        <form onSubmit={handleSubmit} className="flex items-center">
             <Input
+            style={{ backgroundColor: "#d3d3d3"}}
                 isClearable
                 variant='bordered'
                 type='email'
@@ -50,10 +53,11 @@ const MailchimpForm: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 onClear={() => setEmail("")}
             />
-            <Button type="submit" color="secondary" size="lg">
+            <Button type="submit" color="primary" size="lg" className="ml-2">
                 Subscribe
             </Button>
         </form>
+        </div>
     );
 };
 
