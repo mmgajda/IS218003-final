@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 		template: `%s - ${siteConfig.name}`,
 	},
 	description: siteConfig.description,
-	themeColor:[
-	{ media: "(prefers-color-scheme: light)", color: "white" },
-	{ media: "(prefers-color-scheme: dark)", color: "black" },
-],
+	themeColor: [
+		{ media: "(prefers-color-scheme: light)", color: "white" },
+		{ media: "(prefers-color-scheme: dark)", color: "black" },
+	],
 	icons: {
 		icon: "/favicon.ico",
 		shortcut: "/favicon-16x16.png",
@@ -45,7 +45,6 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
-			<GoogleAnalytics GA_MEASUREMENT_ID="G-P6P117GN3H"/>
 			</head>
 			<body
 				className={clsx(
@@ -53,20 +52,23 @@ export default function RootLayout({
 					fontSans.variable
 				)}
 			>
-
+				{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+					<GoogleAnalytics ga_id=
+						{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+				) : null}
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 					<div className="z-10 relative flex flex-col h-screen">
 						<Navbar />
 						<div className="flex justify-center items-center">
-							<Image src={bgimage} alt="A light-colored marble pattern with dark veins." className="relative inset-y-0 z-0"/>
+							<Image src={bgimage} alt="A light-colored marble pattern with dark veins." className="relative inset-y-0 z-0" />
 						</div>
-						
+
 						<main className="absolute container mx-auto max-w-7xl pt-16 px-6 flex-grow z-10">
 							{children}
-							<PrivacyBanner/>
+							<PrivacyBanner />
 						</main>
 						<footer className="relative bottom-0 flex flex-col mx-auto py-3">
-								<Footer />
+							<Footer />
 						</footer>
 					</div>
 				</Providers>
