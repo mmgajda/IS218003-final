@@ -9,57 +9,17 @@ export const siteConfig = {
 			href: "/",
 		},
 		{
-			label: "Men",
-			href: "/men",
+			label: "About Us",
+			href: "/abour",
 		},
 		{
-			label: "Accessories",
-			href: "/accessories",
-		},
-		{
-			label: "Sales",
-			href: "/sales",
-		},
-	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
-		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
+			label: "Newsletter",
+			href: "#subscribe-form",
 		},
 	],
 	links: {
 		instagram: "https://instagram.com",
 		twitter: "https://twitter.com/",
 		tiktok: "https://tiktok.com",
-		newcontent: "/",
-		newsletter: "/",
 	},
 };
