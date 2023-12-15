@@ -45,6 +45,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			</head>
 			<body
 				className={clsx(
@@ -57,20 +58,18 @@ export default function RootLayout({
 						{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
 				) : null}
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="z-10 relative flex flex-col h-screen">
+					<div className="relative z-10  flex flex-col h-screen">
 						<Navbar />
-						<div className="flex justify-center items-center">
-							<Image src={bgimage} alt="A light-colored marble pattern with dark veins." className="relative inset-y-0 z-0" />
-						</div>
+						
 
-						<main className="absolute container mx-auto max-w-7xl pt-16 px-6 flex-grow z-10">
+						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow z-10">
 							{children}
 							<PrivacyBanner />
 						</main>
-						<footer className="relative bottom-0 flex flex-col mx-auto py-3">
+						<footer className="relative bottom-0 flex mx-auto py-3">
 							<Footer />
 						</footer>
-					</div>
+						</div>
 				</Providers>
 			</body>
 		</html>

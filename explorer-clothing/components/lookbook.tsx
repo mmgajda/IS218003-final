@@ -10,7 +10,7 @@ export const Lookbook = () => {
         <div className="text-center">
             <h1>Dive Into The Season&apos;s Looks</h1>
         </div>
-        <div className="flex flex-row gap-2.5">
+        <div className="flex flex-row gap-1">
             <Image src={arrivals1} alt="A sneaker leaning precariously against a basketball."/>
             <Image src={arrivals2} alt="The back of a man wearing a vibrantly colored graphic tee."/>
             <Image src={arrivals3} alt="The bottom half of a man wearing distressed jeans with colorful patchwork."/>

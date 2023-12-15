@@ -10,8 +10,8 @@ export const Reviews = () => {
                 <h1>Reviews</h1>
             </div>
 
-            <div className="max-w-[1200px] gap-10 grid grid-cols-12 grid-rows-2 px-8 ">
-                <Card className="w-[240px] col-span-6 sm:col-span-4 h-[300px]">
+            <div className="max-w-[1200px] gap-10 grid grid-cols-12 grid-rows-1 px-20 pb-20 ">
+                <Card className="col-span-6 sm:col-span-4 h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
