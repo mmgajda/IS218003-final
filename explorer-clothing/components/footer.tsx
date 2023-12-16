@@ -19,7 +19,7 @@ import MailchimpForm from "./emailinput";
 
 export const Footer = () => {
     return (
-		<div className="relative flex gap-10 px-8 bg-black w-3/4 max-w-[1062px]">
+		<div className="relative flex gap-10 px-8 bg-gradient-to-b from-[#9b9898]  w-3/4 max-w-[1062px]">
 			
         <FooterNav className="relative flex mx-auto md:h-[80px]">
 			<div className="">
