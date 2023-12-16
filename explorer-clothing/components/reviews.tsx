@@ -109,10 +109,11 @@ export const Reviews = () => {
                     <CardBody className="z-10 flex-col !items-center text-center">
                         <p className="">
                         The whole shopping experience is like an adventure itself.  Social media is all about sharing your Explorer style. It&apos;s not just fashion; it&apos;s a community of like-minded explorers.
-                            </p>
+                        </p>
+                    </CardBody>
                     <CardBody className="z-10 flex-col !items-center">
                         <p className="my-5">Review text.</p>
-                 </CardBody>
+                </CardBody>
                 </Card>
             </div>
         </>
