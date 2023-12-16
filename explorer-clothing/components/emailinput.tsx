@@ -49,7 +49,7 @@ function MailchimpForm() {
     return (
         <div id="subscribe-form" className='flex flex-col md:w-[400px] items-center my-10'>
             <p>Be the First to Know About the Latest Releases</p>
-        <form onSubmit={handleSubmit} className="flex items-center animate-fade-in-3">
+        <form onSubmit={handleSubmit} className="flex animate-fade-in-3">
             <Input
             style={{ backgroundColor: "#d3d3d3"}}
                 isClearable

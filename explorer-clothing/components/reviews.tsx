@@ -6,12 +6,8 @@ import { Card, CardHeader, CardBody, CardFooter, Divider, Image } from "@nextui-
 export const Reviews = () => {
     return (
         <>
-            <div className="text-center items-center justify-center mt-10 mb-10">
-                <h1>Reviews</h1>
-            </div>
-
-            <div className="max-w-[1200px] gap-10 grid grid-cols-12 grid-rows-1 px-20 pb-20 ">
-                <Card className="col-span-6 sm:col-span-4 h-[300px]">
+            <div className="w-full gap-10 grid grid-cols-12 grid-rows-1 px-20 pb-20 ">
+                <Card className="col-span-4 sm:col-span-4 h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
@@ -31,7 +27,7 @@ export const Reviews = () => {
                     </CardBody>
                 </Card>
 
-                <Card className="col-span-6 sm:col-span-4 h-[300px]">
+                <Card className="col-span-4 sm:col-span-4 h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
@@ -51,7 +47,7 @@ export const Reviews = () => {
                     </CardBody>
                 </Card>
 
-                <Card className="col-span-6 sm:col-span-4 h-[300px]">
+                <Card className="col-span-4 sm:col-span-4 h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
