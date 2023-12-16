@@ -92,7 +92,7 @@ export const Reviews = () => {
                     <Divider/>
                     <CardBody className="z-10 flex-col !items-center text-center">
                         <p className="">
-                            Their collection is legit. Whether you&apos;re climbing a mountain or just conquering the urban jungle, The Explorer's got you covered. It&apos;s not just clothes; it&apos;s a statement that says, &quot;I'm ready for anything!&quot;
+                            Their collection is legit. Whether you&apos;re climbing a mountain or just conquering the urban jungle, The Explorer&apos;s got you covered. It&apos;s not just clothes; it&apos;s a statement that says, &quot;I&apos;m ready for anything!&quot;
                         </p>
                     </CardBody>
                 </Card>
@@ -114,7 +114,7 @@ export const Reviews = () => {
                     <Divider/>
                     <CardBody className="z-10 flex-col !items-center text-center">
                         <p className="">
-                        And quality? It&apos;s like they&apos;ve got a PhD in making stuff that lasts. Fashion meets functionality, and it's a match made in clothing heaven. It&apos;s not just a look; it&apos;s a lifestyle that can keep up with your craziest adventures.
+                        And quality? It&apos;s like they&apos;ve got a PhD in making stuff that lasts. Fashion meets functionality, and it&apos;s a match made in clothing heaven. It&apos;s not just a look; it&apos;s a lifestyle that can keep up with your craziest adventures.
                         </p>
                     </CardBody>
                 </Card>
