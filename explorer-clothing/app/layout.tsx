@@ -49,9 +49,9 @@ export default function RootLayout({
 			</Head>
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased relative",
+					"min-h-screen bg-background font-sans antialiased relative overflow-x-hidden",
 					fontSans.variable
-				)}
+				)} 
 			>
 				{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
 					<GoogleAnalytics ga_id=
