@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Explorer Clothing",
-	description: "Experience the world in style.",
+	name: "The Explorer Apparel",
+	description: "Experience the World in Style.",
 	navItems: [
 		{
 			label: "Home",
@@ -10,7 +10,7 @@ export const siteConfig = {
 		},
 		{
 			label: "About Us",
-			href: "/abour",
+			href: "/about",
 		},
 		{
 			label: "Newsletter",

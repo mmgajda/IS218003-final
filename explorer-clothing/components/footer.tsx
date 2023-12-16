@@ -19,13 +19,16 @@ import MailchimpForm from "./emailinput";
 
 export const Footer = () => {
     return (
-		<div className="max-w-[1200px] gap-10 grid grid-rows-4 px-8 items-center">
+		<div className="relative flex gap-10 px-8 bg-black w-3/4 max-w-[1062px]">
 			
-        <FooterNav className="items-center">
-			<div className="w-[400px]">
+        <FooterNav className="relative flex mx-auto md:h-[80px]">
+			<div className="">
+				<Link href="/privacy" aria-label="Link to the data privacy policy">Data Privacy Policy</Link>
+			</div>
+			<div className="md:w-[35%] mx-8">
 		<MailchimpForm/>
 			</div>
-        <NavbarItem className="mx-4 content-center gap-10">
+        <NavbarItem className="!items-end mx-4 gap-3">
                     <Link isExternal href={siteConfig.links.instagram} aria-label="Instagram">
                         <InstagramIcon className="text-default-500" />
                     </Link>
