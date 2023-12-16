@@ -47,11 +47,12 @@ function MailchimpForm() {
     };
 
     return (
-        <div id="subscribe-form" className='flex flex-col md:w-[400px] items-center my-10'>
-            <p>Be the First to Know About the Latest Releases</p>
-        <form onSubmit={handleSubmit} className="flex animate-fade-in-3">
+        <div id="subscribe-form" className='flex flex-col sm:w-auto lg:w-[140%] items-center my-10'>
+            <p className="text-center text-sm md:text-base">
+                Be the First to Know About the Latest Releases</p>
+        <form onSubmit={handleSubmit} className="flex flex-col md:flex-row animate-fade-in-3 w-full">
             <Input
-            style={{ backgroundColor: "#d3d3d3"}}
+            className='mb-2 md:mb-0 md:mr-2 w-full'
                 isClearable
                 required
                 variant='bordered'
@@ -65,7 +66,8 @@ function MailchimpForm() {
                 onChange={(e) => setInput(e.target.value)}
                 onClear={() => setInput("")}
             />
-            <Button ref={buttonRef} type="submit" color="primary" size="lg" className="ml-2">
+            <Button  className="w-full md:w-auto ml-2"
+                    ref={buttonRef} type="submit" color="primary" size="lg">
                 Subscribe
             </Button>
         </form>
