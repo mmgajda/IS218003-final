@@ -26,7 +26,7 @@ export default function LandingPage() {
 				<Retailers />
 			</div>
 			<div className="relative text-center mt-[7rem] mb-[3rem]">
-                <h1 className='text-center'>See What Others Are Saying</h1>
+                <h1 className='text-center'>Reviews</h1>
             </div>
             <div className="relative flex w-[90%]">
                 <Reviews />

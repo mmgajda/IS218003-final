@@ -1,20 +1,12 @@
-"use client"
+//reviews/testimonials section
+
 import React from "react";
-import NextLink from "next/link";
-import Button from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter, Divider, Image } from "@nextui-org/react";
-import SocialsButton from "./socialsbutton";
 
 export const Reviews = () => {
-    const scrollToForm = (): void => {
-		const formElement = document.getElementById('subscribe-form');
-		if (formElement) {
-			formElement.scrollIntoView({ behavior: 'smooth' });
-		}
-	};
     return (
         <>
-            <div className="w-full gap-10 grid grid-cols-12 grid-rows-2 px-20 pb-20 ">
+            <div className="w-full gap-10 grid grid-cols-12 grid-rows-1 px-20 pb-20 ">
                 <Card className="col-span-4 sm:col-span-4 h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
@@ -30,26 +22,8 @@ export const Reviews = () => {
                         </div>
                     </CardHeader>
                     <Divider/>
-                    <CardBody className="z-10 flex-col !items-center text-center">
-                        <p className="">
-                            The Explorer isn&apos;t your typical clothing brand; it&apos;s a vibe, a lifestyle, and it&apos;s all about embracing your inner adventurer. From earthy vibes to bold fonts, they&apos;ve nailed the whole &quot;let&apos;s go on an epic journey&quot; aesthetic.
-                            </p>
-                    </CardBody>
-                </Card>
-
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
-                    <CardHeader className="flex-col !items-center">
-                        <div className="text-center z-10 my-1.5">
-                            <h2 className="text-xl font-bold">The Explorer Experience</h2>
-                        </div>
-                    </CardHeader>
-                    <Divider/>
-                    <CardBody className="z-10 flex-col text-center justify-center !items-center">
-                        <p className="my-5">Do you have something you want us or the world to know about?</p>
-                        <div className='py-4'>
-                            <SocialsButton scrollToForm={scrollToForm}/>
-                        </div>
-
+                    <CardBody className="z-10 flex-col !items-center">
+                        <p className="my-5">Review text.</p>
                     </CardBody>
                 </Card>
 
@@ -68,10 +42,8 @@ export const Reviews = () => {
                         </div>
                     </CardHeader>
                     <Divider/>
-                    <CardBody className="z-10 flex-col !items-center text-center">
-                        <p className="">
-                        Their taglines are on point. &quot;Unleash Your Wanderlust&quot; is basically an invitation to make your closet as adventurous as your bucket list. They&apos;re not just selling clothes; they&apos;re selling a vibe - and we&apos;re here for it.
-                        </p>
+                    <CardBody className="z-10 flex-col !items-center">
+                        <p className="my-5">Review text.</p>
                     </CardBody>
                 </Card>
 
@@ -90,54 +62,8 @@ export const Reviews = () => {
                         </div>
                     </CardHeader>
                     <Divider/>
-                    <CardBody className="z-10 flex-col !items-center text-center">
-                        <p className="">
-                            Their collection is legit. Whether you&apos;re climbing a mountain or just conquering the urban jungle, The Explorer's got you covered. It&apos;s not just clothes; it&apos;s a statement that says, &quot;I'm ready for anything!&quot;
-                        </p>
-                    </CardBody>
-                </Card>
-
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
-                    <CardHeader className="flex-col !items-center">
-                        <Image
-                            alt="nextui logo"
-                            height={40}
-                            radius="sm"
-                            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                            width={40}
-                        />
-                        <div className="text-center z-10 my-1.5">
-                            <h2 className="text-xl">Jamie</h2>
-                            <p>@OUTsideWJamie</p>
-                        </div>
-                    </CardHeader>
-                    <Divider/>
-                    <CardBody className="z-10 flex-col !items-center text-center">
-                        <p className="">
-                        And quality? It&apos;s like they&apos;ve got a PhD in making stuff that lasts. Fashion meets functionality, and it's a match made in clothing heaven. It&apos;s not just a look; it&apos;s a lifestyle that can keep up with your craziest adventures.
-                        </p>
-                    </CardBody>
-                </Card>
-
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
-                    <CardHeader className="flex-col !items-center">
-                        <Image
-                            alt="nextui logo"
-                            height={40}
-                            radius="sm"
-                            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                            width={40}
-                        />
-                        <div className="text-center z-10 my-1.5">
-                            <h2 className="text-xl">Tyler</h2>
-                            <p>@tylers.closet</p>
-                        </div>
-                    </CardHeader>
-                    <Divider/>
-                    <CardBody className="z-10 flex-col !items-center text-center">
-                        <p className="">
-                        The whole shopping experience is like an adventure itself.  Social media is all about sharing your Explorer style. It&apos;s not just fashion; it&apos;s a community of like-minded explorers.
-                            </p>
+                    <CardBody className="z-10 flex-col !items-center">
+                        <p className="my-5">Review text.</p>
                     </CardBody>
                 </Card>
             </div>
