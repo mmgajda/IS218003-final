@@ -14,12 +14,12 @@ export const About = () => {
 	};
     return (
         <>
-        <div className='flex flex-row justify-center items-center w-full'>
-        <div className="">
-            <Image src={climberimage} alt="Picture of a man climbing up a sheer mountain wall, suspended by climbing rope that he is holding."/>
+        <div className='justify-center flex flex-col md:flex-row w-full'>
+        <div className="relative w-full md:max-w-[45%]">
+            <Image src={climberimage} alt="Picture of a man climbing up a sheer mountain wall, suspended by climbing rope that he is holding." layout="responsive" className="mx-auto justify-right max-w-full"/>
         </div>
-        <div className='w-full md:w-1/3 ml-[3rem]'>
-        <Card className="relative" radius='sm'>
+        <div className=' md:w-1/3 max-w-[30%] ml-10'>
+        <Card className="flex flex-col justify-left h-full w-full mx-auto" radius='sm'>
             <CardBody className='flex flex-col items-center justify-center h-full p-4'>
                 <h1 className="text-center mb-4 font-extrabold text-lg md:text-2xl lg:text-4xl">
                     Unleash Your Wanderlust
@@ -30,7 +30,6 @@ export const About = () => {
                 <div className='py-10'>
                     <CTAButton scrollToForm={scrollToForm}/>
                 </div>
-                
             </CardBody>
         </Card>
         </div>
