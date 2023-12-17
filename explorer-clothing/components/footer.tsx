@@ -33,22 +33,22 @@ export const Footer = () => {
 	}, []);
 	return (
 		// Wrap the FooterNav with a div to control its width and centering
-		<div className="flex justify-center w-full px-4 md:px-8">
-			<FooterNav className="w-full h-[140%] max-w-[1042px] bg-gradient-to-b from-[#9b9898] to-[#ededed]">
-				<div className="flex flex-col md:flex-row justify-between items-center w-full">
+		<div className="mb-5 flex justify-center">
+			<FooterNav className="mb-5 flex w-full max-w-[1060px] h-[11rem] lg:h-[100px] bg-gradient-to-b from-[#9b9898] to-[#ededed]">
+				<div className="flex lg:flex-row justify-between items-center w-full">
 					{/* Privacy Link */}
-					<div className="mb-4 md:mb-0 flex flex-col">
+					<div className="mr-[3%] my-4 flex flex-col">
 						<Link href="/" aria-label="Link to get in contact with The Explorer Clothing">Contact Us</Link>
 						<Link href="/privacy" aria-label="Link to the data privacy policy">Data Privacy Policy</Link>
 					</div>
 
 					{/* Mailchimp Form */}
-					<div className="w-full md:w-1/3 mr-[8rem] mb-4 md:mb-0">
+					<div className="w-full md:w-1/3 mb-1">
 						<MailchimpForm />
 					</div>
 
 					{/* Social Icons */}
-					<NavbarItem className="flex gap-3">
+					<NavbarItem className="ml-[12%] flex gap-3 mb-5">
 						<Link isExternal href={siteConfig.links.instagram} aria-label="Instagram">
 							<InstagramIcon style={{ height: iconSize, width: iconSize }} />
 						</Link>
