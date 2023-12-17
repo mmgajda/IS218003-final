@@ -10,7 +10,7 @@ test('Button Functionality Test', async ({ page }) => {
 
     // Step 2: Locate the button
     // Replace 'button-selector' with the actual selector of the button
-    const button = page.locator('text=Be the First to Explore');
+    const button = page.locator('text=Learn More');
 
     // Step 3: Click the button
     await button.click();
