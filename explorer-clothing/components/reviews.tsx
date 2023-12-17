@@ -14,8 +14,8 @@ export const Reviews = () => {
 	};
     return (
         <>
-            <div className="w-full gap-10 grid grid-cols-12 grid-rows-2 px-20 pb-20 ">
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
+            <div className="w-full gap-10 grid  grid-cols-1 md:grid-cols-12 grid-rows-6 md:grid-rows-2 px-20 pb-20 ">
+                <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
@@ -37,7 +37,7 @@ export const Reviews = () => {
                     </CardBody>
                 </Card>
 
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
+                <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <div className="text-center z-10 my-1.5">
                             <h2 className="text-xl font-bold">The Explorer Experience</h2>
@@ -46,14 +46,14 @@ export const Reviews = () => {
                     <Divider/>
                     <CardBody className="z-10 flex-col text-center justify-center !items-center">
                         <p className="my-5">Do you have something you want us or the world to know about?</p>
-                        <div className='py-4'>
+                        <div className='flex py-4'>
                             <SocialsButton scrollToForm={scrollToForm}/>
                         </div>
 
                     </CardBody>
                 </Card>
 
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
+                <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
@@ -75,7 +75,7 @@ export const Reviews = () => {
                     </CardBody>
                 </Card>
 
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
+                <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
@@ -97,7 +97,7 @@ export const Reviews = () => {
                     </CardBody>
                 </Card>
 
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
+                <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
@@ -119,7 +119,7 @@ export const Reviews = () => {
                     </CardBody>
                 </Card>
 
-                <Card className="col-span-4 sm:col-span-4 h-[300px]">
+                <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
                         <Image
                             alt="nextui logo"
