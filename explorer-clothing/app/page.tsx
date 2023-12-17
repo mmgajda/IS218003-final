@@ -31,10 +31,10 @@ export default function LandingPage() {
             <div className="relative flex w-[90%]">
                 <Reviews />
             </div>
-			<div className="relative text-center mt-[7rem] mb-[3rem]">
+			<div className="relative text-center mt-[3rem] mb-[3rem]">
             	<h1>Dive Into The Season&apos;s Looks</h1>
         	</div>
-            <div className="relative flex flex-col items-center mb-[10rem] left-[0.4rem]">
+            <div className="relative flex items-center mb-[12rem] left-[0.4rem]">
                 <Lookbook />
             </div>
         </section>
