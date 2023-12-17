@@ -17,6 +17,20 @@ export const siteConfig = {
 			href: "#subscribe-form",
 		},
 	],
+	navMenuItems: [
+		{
+			label: "Home",
+			href: "/",
+		},
+		{
+			label: "About Us",
+			href: "/about",
+		},
+		{
+			label: "Newsletter",
+			href: "#subscribe-form",
+		},
+	],
 	links: {
 		instagram: "https://instagram.com",
 		twitter: "https://twitter.com/",

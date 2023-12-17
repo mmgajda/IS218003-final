@@ -61,7 +61,7 @@ export default function RootLayout({
 				<div className="fixed w-screen h-screen flex justify-center">
 					<Image src={bgimage} alt="A light-colored marble pattern with dark veins." />
 				</div>
-					<div className="relative z-10  flex flex-col h-screen">
+					<div id="nav" className="relative z-10  flex flex-col h-screen">
 						<Navbar />
 						
 
