@@ -69,7 +69,7 @@ export default function RootLayout({
 							{children}
 							<PrivacyBanner />
 						</main>
-						<footer className="my-auto py-auto">
+						<footer className="z-[9999] my-auto py-auto">
 							<Footer />
 						</footer>
 						</div>
