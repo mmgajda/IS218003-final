@@ -15,9 +15,9 @@ export const Hero = () => {
 
     return (
         <div className='justify-center flex flex-col md:flex-row w-full'>
-            <div className='w-full md:w-1/2 p-4'>
-                <Card className="w-full max-w-[80%] mx-auto" radius='sm'>
-                    <CardBody className='flex flex-col items-center justify-center h-full'>
+            <div className='ml-auto md:w-1/3 max-w-[90%]'>
+                <Card className="flex flex-col justify-right h-full w-full mx-auto" radius='sm'>
+                    <CardBody className='flex flex-col items-center justify-center h-full p-4'>
                         <h1 className="text-center mb-4 font-extrabold text-lg md:text-2xl lg:text-4xl">
                             Discover the New Collection
                         </h1>
@@ -30,8 +30,8 @@ export const Hero = () => {
                     </CardBody>
                 </Card>
             </div>
-            <div className='w-full mx-auto md:max-w-[180%] justify-right'>
-                <Image src={heroImage} alt="Picture of a happy group of people joyously running through an open field" layout="responsive" className="max-w-[85%]" />
+            <div className='relative w-full mx-auto md:max-w-[55%]'>
+                <Image src={heroImage} alt="Picture of a happy group of people joyously running through an open field" layout="responsive" className="w-full" />
             </div>
         </div>
     );

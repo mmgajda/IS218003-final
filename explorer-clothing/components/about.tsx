@@ -13,12 +13,12 @@ export const About = () => {
 		}
 	};
     return (
-        <>
         <div className='justify-center flex flex-col md:flex-row w-full'>
-        <div className="relative w-full md:max-w-[45%]">
+        <div className="relative w-full md:max-w-[45%] ml-[8%]">
             <Image src={climberimage} alt="Picture of a man climbing up a sheer mountain wall, suspended by climbing rope that he is holding." layout="responsive" className="mx-auto justify-right max-w-full"/>
         </div>
-        <div className=' md:w-1/3 max-w-[30%] ml-10'>
+        {/* <div className=' w-full md:w-1/3 max-w-[80%] mx-[7%]'> */}
+        <div className='ml-auto md:w-1/3 max-w-[90%]'>
         <Card className="flex flex-col justify-left h-full w-full mx-auto" radius='sm'>
             <CardBody className='flex flex-col items-center justify-center h-full p-4'>
                 <h1 className="text-center mb-4 font-extrabold text-lg md:text-2xl lg:text-4xl">
@@ -34,7 +34,6 @@ export const About = () => {
         </Card>
         </div>
     </div>
-            </>
     )
 }
 
