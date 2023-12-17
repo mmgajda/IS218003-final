@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 h1 {
-    font-size: xx-large;
+    font-size: 10rem;
     font-weight: 800;
 }
 
-p {
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h3 {
     font-size: large;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+
+p,
+li {
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .responsive-icon {
