@@ -7,7 +7,7 @@ interface ButtonComponentProps {
 
 const SocialsButton = ({ scrollToForm }: { scrollToForm: () => void }) => {
     return (
-        <Button onClick= { scrollToForm } color = "primary" >
+        <Button onClick= { scrollToForm } id="socials-button" color="primary" >
             Share your Explorer Experience
                 </Button>
     );

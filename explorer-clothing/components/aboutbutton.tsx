@@ -7,7 +7,7 @@ interface ButtonComponentProps {
 
 const AboutButton = ({ scrollToForm }: { scrollToForm: () => void }) => {
     return (
-        <Button onClick={scrollToForm} color="primary">
+        <Button onClick={scrollToForm} id="about-button" color="primary">
             Learn More about Explorer
         </Button>
     );

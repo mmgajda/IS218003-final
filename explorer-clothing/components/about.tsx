@@ -4,6 +4,7 @@ import Image from 'next/image';
 import climberimage from '@/public/membership-1-climber.svg'
 import { Card, CardBody } from '@nextui-org/react';
 import CTAButton from './ctabutton';
+import AboutButton from './aboutbutton';
 
 export const About = () => {
     const scrollToForm = (): void => {
@@ -28,7 +29,7 @@ export const About = () => {
                     A brand forged through friendship, inspired by the beauty of the outdoors, crafted from sustainable materials
                 </p>
                 <div className='py-10'>
-                    <CTAButton scrollToForm={scrollToForm}/>
+                    <AboutButton scrollToForm={scrollToForm}/>
                 </div>
             </CardBody>
         </Card>
