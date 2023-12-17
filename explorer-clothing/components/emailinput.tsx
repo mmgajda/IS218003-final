@@ -48,9 +48,9 @@ function MailchimpForm() {
 
     return (
         <div id="subscribe-form" className='flex flex-col sm:w-auto lg:w-[140%] items-center my-10'>
-            <p className="text-center text-sm md:text-base">
+            <p className="text-center md:text-base">
                 Be the First to Know About the Latest Releases</p>
-        <form onSubmit={handleSubmit} className="flex flex-col md:flex-row animate-fade-in-3 w-full">
+        <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row animate-fade-in-3 w-full">
             <Input
             className='mb-2 md:mb-0 md:mr-2 w-full'
                 isClearable

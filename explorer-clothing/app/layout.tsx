@@ -69,7 +69,7 @@ export default function RootLayout({
 							{children}
 							<PrivacyBanner />
 						</main>
-						<footer className="relative flex justify-center bottom-0 py-[2rem]">
+						<footer className="my-auto py-auto">
 							<Footer />
 						</footer>
 						</div>
