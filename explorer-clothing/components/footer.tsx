@@ -49,13 +49,13 @@ export const Footer = () => {
 
 					{/* Social Icons */}
 					<NavbarItem className="ml-[12%] flex gap-3 mb-5">
-						<Link isExternal href={siteConfig.links.instagram} aria-label="Instagram">
+						<Link id="instagram" isExternal href={siteConfig.links.instagram} aria-label="Instagram">
 							<InstagramIcon style={{ height: iconSize, width: iconSize }} />
 						</Link>
-						<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
+						<Link id="twitter" isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 							<TwitterIcon style={{ height: iconSize, width: iconSize }} />
 						</Link>
-						<Link isExternal href={siteConfig.links.tiktok} aria-label="TikTok">
+						<Link id="tiktok" isExternal href={siteConfig.links.tiktok} aria-label="TikTok">
 							<TikTokIcon style={{ height: iconSize, width: iconSize }} />
 						</Link>
 					</NavbarItem>
