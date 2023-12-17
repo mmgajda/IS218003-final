@@ -9,6 +9,7 @@ import {
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Input } from "@nextui-org/input";
+import Link from "next/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
@@ -70,6 +71,28 @@ export const Navbar = () => {
 				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
+
+			<NavbarMenu>
+				{searchInput}
+				<div className="mx-4 mt-2 flex flex-col gap-2">
+					{siteConfig.navMenuItems.map((item, index) => (
+						<NavbarMenuItem key={`${item}-${index}`}>
+							<Link
+								color={
+									index === 2
+										? "primary"
+										: index === siteConfig.navMenuItems.length - 1
+										? "danger"
+										: "foreground"
+								}
+								href="#"
+							>
+								{item.label}
+							</Link>
+						</NavbarMenuItem>
+					))}
+				</div>
+			</NavbarMenu>
 		</NextUINav>
 	);
 };
