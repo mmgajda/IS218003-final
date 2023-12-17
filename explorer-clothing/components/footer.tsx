@@ -38,7 +38,7 @@ export const Footer = () => {
 				<div className="flex lg:flex-row justify-between items-center w-full">
 					{/* Privacy Link */}
 					<div className="mr-[3%] my-4 flex flex-col">
-						<Link href="/" aria-label="Link to get in contact with The Explorer Clothing">Contact Us</Link>
+						<Link id="contact" href="mailto:xplrcthng@gmail.com" aria-label="Link to get in contact with The Explorer Clothing">Contact Us</Link>
 						<Link href="/privacy" aria-label="Link to the data privacy policy">Data Privacy Policy</Link>
 					</div>
 
