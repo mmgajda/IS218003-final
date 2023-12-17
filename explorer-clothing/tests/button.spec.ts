@@ -10,7 +10,7 @@ test('Button Functionality Test', async ({ page }) => {
 
     // Step 2: Locate the button
     // Replace 'button-selector' with the actual selector of the button
-    const button = page.locator('text=Learn More');
+    const button = page.locator('text=Share Your Explorer');
 
     // Step 3: Click the button
     await button.click();
@@ -18,7 +18,7 @@ test('Button Functionality Test', async ({ page }) => {
     // Step 4: Verify the expected outcome
     // This depends on what the button is supposed to do
     // Replace 'target-section-selector' with the selector of the section to scroll to
-    // await page.waitForTimeout(10000);
+    await page.waitForTimeout(100);
     const targetSection = page.locator('#subscribe-form');
 
     // Wait for the target section to be visible in the viewport
