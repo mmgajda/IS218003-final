@@ -44,33 +44,35 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<head>
-			</head>
+			<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			</Head>
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased relative",
+					"min-h-screen bg-background font-sans antialiased relative overflow-x-hidden",
 					fontSans.variable
-				)}
+				)} 
 			>
 				{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
 					<GoogleAnalytics ga_id=
 						{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
 				) : null}
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="z-10 relative flex flex-col h-screen">
+				<div className="fixed w-screen h-screen flex justify-center">
+					<Image src={bgimage} alt="A light-colored marble pattern with dark veins." />
+				</div>
+					<div id="nav" className="relative z-10  flex flex-col h-screen">
 						<Navbar />
-						<div className="flex justify-center items-center">
-							<Image src={bgimage} alt="A light-colored marble pattern with dark veins." className="relative inset-y-0 z-0" />
-						</div>
+						
 
-						<main className="absolute container mx-auto max-w-7xl pt-16 px-6 flex-grow z-10">
+						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow z-10">
 							{children}
 							<PrivacyBanner />
 						</main>
-						<footer className="relative bottom-0 flex flex-col mx-auto py-3">
+						<footer className="z-[9999] my-auto py-auto">
 							<Footer />
 						</footer>
-					</div>
+						</div>
 				</Providers>
 			</body>
 		</html>

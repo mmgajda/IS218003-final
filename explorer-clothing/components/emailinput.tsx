@@ -1,13 +1,23 @@
-'use client';
-
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { Input, Button } from '@nextui-org/react';
+import Notification from '@/components/notification'
+
+interface NotificationState {
+    message: string;
+    type: string;
+}
 
 const MailchimpForm: React.FC = () => {
-    const [email, setEmail] = useState<string>('');
+    const [input, setInput] = useState<string>("");
+    const [notification, setNotification] = useState<NotificationState>({ message: '', type: '' });
 
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        const email = input;
+
+        if (!email) return;
+
         try {
             const response = await fetch("/api/subscribe", {
                 method: 'POST',
@@ -17,46 +27,44 @@ const MailchimpForm: React.FC = () => {
                 },
             });
 
-            // Debugging: Log the raw text response
-            const textResponse = await response.text();
-            console.log(textResponse);
-
-            // Try parsing the text response as JSON
             const data = await response.json();
 
             if (response.ok) {
-                setEmail('');
-                alert('Subscribed successfully!');
+                setInput('');
+                setNotification({ message: 'Subscribed successfully!', type: 'success' });
             } else {
                 throw new Error(data.error || 'An error occurred');
             }
         } catch (error: any) {
-            alert('Subscription failed: ' + error.message);
+            setNotification({ message: 'Subscription failed: ' + error.message, type: 'error' });
         }
+
+        // Auto-hide notification after some time
+        setTimeout(() => setNotification({ message: '', type: '' }), 5000);
     };
 
     return (
-        <div id="subscribe-form" className='flex flex-col items-center my-10'>
-            <p>Be the First to Know About the Latest Releases</p>
-        <form onSubmit={handleSubmit} className="flex items-center">
-            <Input
-            style={{ backgroundColor: "#d3d3d3"}}
-                isClearable
-                variant='bordered'
-                type='email'
-                label='Email'
-                fullWidth
-                color="primary"
-                size="lg"
-                placeholder="Your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onClear={() => setEmail("")}
-            />
-            <Button type="submit" color="primary" size="lg" className="ml-2">
-                Subscribe
-            </Button>
-        </form>
+        <div id="subscribe-form">
+            <form onSubmit={handleSubmit}>
+                <Input
+                    isClearable
+                    required
+                    variant='bordered'
+                    type='email'
+                    label='Email'
+                    fullWidth
+                    color="primary"
+                    size="lg"
+                    placeholder="Your email"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onClear={() => setInput("")}
+                />
+                <Button type="submit" color="primary" size="lg">
+                    Subscribe
+                </Button>
+            </form>
+            <Notification message={notification.message} type={notification.type} />
         </div>
     );
 };

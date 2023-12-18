@@ -7,7 +7,7 @@ interface ButtonComponentProps {
 
 const CTAButton = ({ scrollToForm }: { scrollToForm: () => void }) => {
     return (
-        <Button onClick={scrollToForm} color="primary">
+        <Button onClick={scrollToForm} id="cta" color="primary">
             Be the First to Explore
         </Button>
     );

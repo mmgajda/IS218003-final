@@ -8,11 +8,9 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
-
+import Link from "next/link";
 import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -45,7 +43,7 @@ export const Navbar = () => {
 				
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 					<Image src={ Logo } alt="Explorer Clothing Logo" height={24} width={24} />
-						<p className="font-bold text-inherit">EXPLORER CLOTHING</p>
+						<p className="font-bold text-inherit">THE EXPLORER</p>
 					</NextLink>
 				</NavbarBrand>
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -88,7 +86,6 @@ export const Navbar = () => {
 										: "foreground"
 								}
 								href="#"
-								size="lg"
 							>
 								{item.label}
 							</Link>
