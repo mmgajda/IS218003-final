@@ -34,7 +34,7 @@ export const About = () => {
             </CardBody>
         </Card>
         </div>
-    </div>
+        </div>
     )
 }
 

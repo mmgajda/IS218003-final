@@ -1,23 +1,22 @@
-'use client';
-
-import { FormEvent, useRef, useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { Input, Button } from '@nextui-org/react';
+import Notification from '@/components/notification'
 
-function MailchimpForm() {
-    const [input, setInput] = useState("");
-    const [active, setActive] =  useState(false);
-    const buttonRef = useRef<HTMLButtonElement>(null);
+interface NotificationState {
+    message: string;
+    type: string;
+}
+
+const MailchimpForm: React.FC = () => {
+    const [input, setInput] = useState<string>("");
+    const [notification, setNotification] = useState<NotificationState>({ message: '', type: '' });
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         const email = input;
-        const button = buttonRef.current;
 
-        if(!email || !button) return;
-        if(!active) {
-            setActive(true);
-        }
+        if (!email) return;
 
         try {
             const response = await fetch("/api/subscribe", {
@@ -28,49 +27,44 @@ function MailchimpForm() {
                 },
             });
 
-            // Debugging: Log the raw text response
-            const textResponse = await response.text();
-            // console.log(textResponse);
-
-            // Try parsing the text response as JSON
             const data = await response.json();
 
             if (response.ok) {
                 setInput('');
-                alert('Subscribed successfully!');
+                setNotification({ message: 'Subscribed successfully!', type: 'success' });
             } else {
                 throw new Error(data.error || 'An error occurred');
             }
         } catch (error: any) {
-            // alert('Subscription failed: ' + error.message);
+            setNotification({ message: 'Subscription failed: ' + error.message, type: 'error' });
         }
+
+        // Auto-hide notification after some time
+        setTimeout(() => setNotification({ message: '', type: '' }), 5000);
     };
 
     return (
-        <div id="subscribe-form" className='flex flex-col sm:w-auto lg:w-[140%] items-center my-10'>
-            <p className="text-center md:text-base">
-                Be the First to Know About the Latest Releases</p>
-        <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row animate-fade-in-3 w-full">
-            <Input
-            className='mb-2 md:mb-0 md:mr-2 w-full'
-                isClearable
-                required
-                variant='bordered'
-                type='email'
-                label='Email'
-                fullWidth
-                color="primary"
-                size="lg"
-                placeholder="Your email"
-                value={ input }
-                onChange={(e) => setInput(e.target.value)}
-                onClear={() => setInput("")}
-            />
-            <Button  className="w-full md:w-auto ml-2"
-                    ref={buttonRef} type="submit" color="primary" size="lg">
-                Subscribe
-            </Button>
-        </form>
+        <div id="subscribe-form">
+            <form onSubmit={handleSubmit}>
+                <Input
+                    isClearable
+                    required
+                    variant='bordered'
+                    type='email'
+                    label='Email'
+                    fullWidth
+                    color="primary"
+                    size="lg"
+                    placeholder="Your email"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onClear={() => setInput("")}
+                />
+                <Button type="submit" color="primary" size="lg">
+                    Subscribe
+                </Button>
+            </form>
+            <Notification message={notification.message} type={notification.type} />
         </div>
     );
 };
