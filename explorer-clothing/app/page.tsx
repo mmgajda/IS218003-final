@@ -4,6 +4,7 @@ import Reviews from "@/components/reviews";
 import Lookbook from "@/components/lookbook";
 import Retailers from "@/components/retailers";
 import Lookbook2 from "@/components/lookbook2";
+import EmailModal from "@/components/emailmodal";
 
 export default function LandingPage() {
     return (
