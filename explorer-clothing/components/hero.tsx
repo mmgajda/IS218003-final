@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Card, CardBody } from '@nextui-org/react';
 import CTAButton from './ctabutton';
-import heroImage from "@/public/hero1.svg";
+import heroImage from "@/public/hero1.webp";
 
 export const Hero = () => {
     const scrollToForm = (): void => {

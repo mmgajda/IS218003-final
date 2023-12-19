@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image';
 import NextLink from "next/link";
-import rei from '@/public/Recreational_Equipment,_Inc.-Logo 1.svg'
-import backcountry from '@/public/backcountry_logo 1.svg'
-import moosejaw from '@/public/moosejaw-logo-vector 2.svg'
+import rei from '@/public/Recreational_Equipment_Inc.-Logo.webp'
+import backcountry from '@/public/backcountry_logo 1.webp'
+import moosejaw from '@/public/moosejaw-logo-vector-2.webp'
 
 const Retailers = () => {
     return (

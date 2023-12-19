@@ -1,9 +1,7 @@
 import Hero from "@/components/hero";
-import MailchimpForm from "@/components/emailinput";
 import About from '@/components/about';
 import Reviews from "@/components/reviews";
 import Lookbook from "@/components/lookbook";
-import bgimage from "@/public/bg.png";
 import Image from "next/image";
 import Retailers from "@/components/retailers";
 

@@ -17,7 +17,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon } from "@/components/icons";
-import Logo from "@/public/Logo.svg";
+import Logo from "@/public/Logo.webp";
 
 export const Navbar = () => {
 	const searchInput = (
@@ -42,7 +42,7 @@ export const Navbar = () => {
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 				
 					<NextLink className="flex justify-start items-center gap-1" href="/">
-					<Image src={ Logo } alt="Explorer Clothing Logo" height={24} width={24} />
+					<Image src={ Logo } alt="Explorer Clothing Logo" className="auto w-[24px]" />
 						<p className="font-bold text-inherit">THE EXPLORER</p>
 					</NextLink>
 				</NavbarBrand>

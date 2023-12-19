@@ -10,7 +10,7 @@ import GoogleAnalytics from "@/components/googleanalytics";
 import PrivacyBanner from "@/components/privacybanner";
 import clsx from "clsx";
 import Image from "next/image";
-import bgimage from "@/public/bg.png";
+import bgimage from "@/public/background.webp";
 
 
 export const metadata: Metadata = {
@@ -53,9 +53,9 @@ export default function RootLayout({
 					fontSans.variable
 				)} 
 			>
-				{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+				{process.env.GOOGLE_ANALYTICS ? (
 					<GoogleAnalytics ga_id=
-						{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+						{process.env.GOOGLE_ANALYTICS} />
 				) : null}
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 				<div className="fixed w-screen h-screen flex justify-center">
