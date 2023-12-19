@@ -37,7 +37,7 @@ export const Navbar = () => {
 	);
 
 	return (
-		<NextUINav maxWidth="xl" position="sticky">
+		<NextUINav maxWidth="xl" className="fixed md:sticky">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 				
