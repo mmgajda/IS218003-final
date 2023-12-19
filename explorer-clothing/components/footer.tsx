@@ -34,7 +34,7 @@ export const Footer = () => {
 	return (
 		// Wrap the FooterNav with a div to control its width and centering
 		<div className="mb-5 flex justify-center">
-			<FooterNav className="mb-5 flex w-full max-w-[1060px] h-[11rem] lg:h-[100px] bg-gradient-to-b from-[#9b9898] to-[#ededed]">
+			<FooterNav className="mb-5 flex w-full max-w-[1060px] h-[16rem] lg:h-[160px] bg-gradient-to-b from-[#9b9898] to-[#ededed]">
 				<div className="flex lg:flex-row justify-between items-center w-full">
 					{/* Privacy Link */}
 					<div className="mr-[3%] my-4 flex flex-col">
