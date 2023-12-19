@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Mailto Link Test', async ({ page }) => {
-    await page.goto('http://localhost:3000/');
+    await page.goto('https://is-218-003-final.vercel.app/');
 
     const mailtoLink = page.locator('#contact');
 
