@@ -1,17 +1,24 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardBody } from '@nextui-org/react';
-import CTAButton from './ctabutton';
 import heroImage from "@/public/hero1.webp";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link } from "@nextui-org/react";
+import MailchimpForm from './emailinput';
+import CTAButton from './ctabutton';
+
+
 
 export const Hero = () => {
-    const scrollToForm = (): void => {
-        const formElement = document.getElementById('subscribe-form');
-        if (formElement) {
-            formElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+    // const scrollToForm = (): void => {
+    //     const formElement = document.getElementById('subscribe-form');
+    //     if (formElement) {
+    //         formElement.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    // };
+
+    const [isModalVisible, setModalVisible] = useState<boolean>(false);
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     return (
         <div className='justify-center flex flex-col md:flex-row w-full'>
@@ -25,7 +32,27 @@ export const Hero = () => {
                             Sign up now for 25% off of your first purchase
                         </p>
                         <div className='py-10'>
-                            <CTAButton scrollToForm={scrollToForm}/>
+                        <CTAButton onClick={onOpen}></CTAButton>
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                <ModalContent>
+                    {(onClose) => (
+                        <>
+                            <ModalHeader className="flex flex-col gap-1">Our Newsletter</ModalHeader>
+                            <ModalBody>
+                                <p>
+                                    Subscribe to our newsletter for the latest sales, promotions, and updates.
+                                </p>
+                                <MailchimpForm />
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="danger" variant="light" onPress={onClose}>
+                                    Close
+                                </Button>
+                            </ModalFooter>
+                        </>
+                    )}
+                </ModalContent>
+            </Modal>
                         </div>
                     </CardBody>
                 </Card>

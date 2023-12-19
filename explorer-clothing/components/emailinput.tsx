@@ -6,12 +6,15 @@ interface NotificationState {
     message: string;
     type: string;
 }
+interface EmailFormProps {
+    onSubmit: (email: string) => void;
+}
 
 const MailchimpForm: React.FC = () => {
     const [input, setInput] = useState<string>("");
     const [notification, setNotification] = useState<NotificationState>({ message: '', type: '' });
 
-    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         const email = input;
