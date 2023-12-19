@@ -1,9 +1,8 @@
 "use client";
 import React from 'react'
 import Image from 'next/image';
-import climberimage from '@/public/membership-1-climber.svg'
+import climberimage from '@/public/about-climber.webp'
 import { Card, CardBody } from '@nextui-org/react';
-import CTAButton from './ctabutton';
 import AboutButton from './aboutbutton';
 
 export const About = () => {

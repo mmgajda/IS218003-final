@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from 'react'
 
-import arrivals1 from '@/public/boots.svg'
-import arrivals2 from '@/public/arrivals-2-shirt.svg'
-import arrivals3 from '@/public/arrivals-3-jeans.svg'
+import arrivals1 from '@/public/arrivals1.webp'
+import arrivals2 from '@/public/arrivals2.webp'
+import arrivals3 from '@/public/arrivals3.webp'
 export const Lookbook = () => {
     return (
         <>

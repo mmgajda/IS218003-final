@@ -1,8 +1,6 @@
-"use client"
+'use client';
 import React from "react";
-import NextLink from "next/link";
-import Button from "@nextui-org/react";
-import { Card, CardHeader, CardBody, CardFooter, Divider, Image } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 import SocialsButton from "./socialsbutton";
 
 export const Reviews = () => {
@@ -17,13 +15,6 @@ export const Reviews = () => {
             <div className="w-full gap-10 grid  grid-cols-1 md:grid-cols-12 grid-rows-6 md:grid-rows-2 px-20 pb-20 ">
                 <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
-                        <Image
-                            alt="nextui logo"
-                            height={40}
-                            radius="sm"
-                            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                            width={40}
-                        />
                         <div className="text-center z-10 my-1.5">
                             <h2 className="text-xl">Brad</h2>
                             <p>@b.radadventures</p>
@@ -55,13 +46,6 @@ export const Reviews = () => {
 
                 <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
-                        <Image
-                            alt="nextui logo"
-                            height={40}
-                            radius="sm"
-                            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                            width={40}
-                        />
                         <div className="text-center z-10 my-1.5">
                             <h2 className="text-xl">Jessica</h2>
                             <p>@jess.hunter</p>
@@ -77,13 +61,6 @@ export const Reviews = () => {
 
                 <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
-                        <Image
-                            alt="nextui logo"
-                            height={40}
-                            radius="sm"
-                            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                            width={40}
-                        />
                         <div className="text-center z-10 my-1.5">
                             <h2 className="text-xl">Alex</h2>
                             <p>@alXtravels</p>
@@ -99,13 +76,6 @@ export const Reviews = () => {
 
                 <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
-                        <Image
-                            alt="nextui logo"
-                            height={40}
-                            radius="sm"
-                            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                            width={40}
-                        />
                         <div className="text-center z-10 my-1.5">
                             <h2 className="text-xl">Jamie</h2>
                             <p>@OUTsideWJamie</p>
@@ -121,13 +91,6 @@ export const Reviews = () => {
 
                 <Card className="col-span-8 lg:col-span-4 md:h-[300px]">
                     <CardHeader className="flex-col !items-center">
-                        <Image
-                            alt="nextui logo"
-                            height={40}
-                            radius="sm"
-                            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                            width={40}
-                        />
                         <div className="text-center z-10 my-1.5">
                             <h2 className="text-xl">Tyler</h2>
                             <p>@tylers.closet</p>
