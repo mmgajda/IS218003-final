@@ -10,25 +10,25 @@ export const siteConfig = {
 		},
 		{
 			label: "About Us",
-			href: "#about.button",
+			href: "#about-card",
 		},
 		{
-			label: "Newsletter",
-			href: "#subscribe-form",
+			label: "Where to Buy",
+			href: "#retailer-banner",
 		},
 	],
 	navMenuItems: [
 		{
 			label: "Home",
-			href: "/",
+			href: "#",
 		},
 		{
 			label: "About Us",
-			href: "/about",
+			href: "#about-card",
 		},
 		{
-			label: "Newsletter",
-			href: "#subscribe-form",
+			label: "Where to Buy",
+			href: "#retailer-banner",
 		},
 	],
 	links: {

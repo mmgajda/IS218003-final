@@ -16,7 +16,7 @@ export const Hero = () => {
     return (
         <div className='justify-center flex flex-col md:flex-row w-full'>
             <div className='ml-[5%] w-auto lg:w-1/3 max-w-[90%]'>
-                <Card className="flex flex-col justify-right h-full w-full mx-auto" radius='sm'>
+                <Card className="mb-10 flex flex-col justify-right h-full w-full mx-auto" radius='sm'>
                     <CardBody className='flex flex-col items-center justify-center h-full p-4'>
                         <h1 className="text-center mb-4 font-extrabold text-lg md:text-2xl lg:text-4xl">
                             Discover the New Collection
