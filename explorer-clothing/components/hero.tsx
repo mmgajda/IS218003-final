@@ -31,7 +31,7 @@ export const Hero = () => {
                 </Card>
             </div>
             <div className='relative w-full mx-auto md:max-w-[55%]'>
-                <Image src={heroImage} alt="Picture of a happy group of people joyously running through an open field" layout="responsive" className="w-full" />
+                <Image src={heroImage} alt="Picture of a happy group of people joyously running through an open field" loading='eager' layout="responsive" className="w-full" />
             </div>
         </div>
     );

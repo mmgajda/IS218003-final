@@ -11,13 +11,13 @@ const Retailers = () => {
         <div className='relative place-items-center lg:w-[64rem] flex gap-[2rem] bg-slate-400 bg-opacity-40 rounded-md'>
 
                 <NextLink href="https://www.rei.com/">
-                    <Image src={rei} alt="Logo of Recreational Equipment Inc." className='object-contain'/>
+                    <Image src={rei} alt="Logo of Recreational Equipment Inc., Click here to access their website" className='object-contain'/>
                 </NextLink>
                 <NextLink href="https://www.backcountry.com/">
-                    <Image src={backcountry} alt="Logo of Backcountry.com" className='object-contain'/>
+                    <Image src={backcountry} alt="Logo of Backcountry.com, Click here to access their website" className='object-contain'/>
                 </NextLink>
                 <NextLink href="https://www.moosejaw.com/">
-                    <Image src={moosejaw} alt="Logo of Moosejaw" className='object-contain'/>
+                    <Image src={moosejaw} alt="Logo of Moosejaw.com, Click here to access their website" className='object-contain'/>
                 </NextLink>
         </div>
         </>
