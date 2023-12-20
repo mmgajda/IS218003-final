@@ -10,7 +10,7 @@ test('Email Submit Form Test', async ({ page }) => {
     const emailToTest = generateRandomEmail();
 
     // Step 1: Navigate to the page with the email form
-    await page.goto('https://is-218-003-final.vercel.app/');
+    await page.goto('https://thexplorer.vercel.app/');
 
     // Step 2: Fill in the email address
     await page.fill('input[type="email"]', emailToTest); // Replace with your email input selector

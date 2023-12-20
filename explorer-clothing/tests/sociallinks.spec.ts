@@ -3,7 +3,7 @@
 // const { test, expect } = require('@playwright/test');
 
 // test('Socials Link Test', async ({ page }) => {
-//     await page.goto('https://is-218-003-final.vercel.app/');
+//     await page.goto('https://thexplorer.vercel.app/');
 
 
 //     //Comment out two of the three tests and run on each link, one at a time.
