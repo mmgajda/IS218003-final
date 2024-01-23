@@ -1,14 +1,17 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
+import Head from "next/head";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Link } from "@nextui-org/link";
 import GoogleAnalytics from "@/components/googleanalytics";
 import PrivacyBanner from "@/components/privacybanner";
 import clsx from "clsx";
+import Image from "next/image";
+import bgimage from "@/public/background.webp";
+
 
 export const metadata: Metadata = {
 	title: {
@@ -27,6 +30,13 @@ export const metadata: Metadata = {
 	},
 };
 
+export const viewport = {
+	themeColor: [
+		{ media: "(prefers-color-scheme: light)", color: "white" },
+		{ media: "(prefers-color-scheme: dark)", color: "black" },
+	],
+}
+
 export default function RootLayout({
 	children,
 }: {
@@ -34,26 +44,35 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<head />
-			<GoogleAnalytics GA_MEASUREMENT_ID="G-P6P117GN3H"/>
+			<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			</Head>
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen bg-background font-sans antialiased relative overflow-x-hidden",
 					fontSans.variable
-				)}
+				)} 
 			>
+				{process.env.GOOGLE_ANALYTICS ? (
+					<GoogleAnalytics ga_id=
+						{process.env.GOOGLE_ANALYTICS} />
+				) : null}
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col h-screen">
+				<div className="fixed w-screen h-screen flex justify-center">
+					<Image src={bgimage} alt="A light-colored marble pattern with dark veins." />
+				</div>
+					<div id="nav" className="relative z-10  flex flex-col h-screen">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+						
+
+						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow z-10">
 							{children}
-							<PrivacyBanner/>
+							<PrivacyBanner />
 						</main>
-						<footer className="w-full flex items-center justify-center py-3">
+						<footer className="z-[9999] my-auto py-auto">
 							<Footer />
 						</footer>
-						
-					</div>
+						</div>
 				</Providers>
 			</body>
 		</html>

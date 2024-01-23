@@ -1,65 +1,39 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Explorer Clothing",
-	description: "Experience the world in style.",
+	name: "The Explorer Apparel",
+	description: "Experience the World in Style.",
 	navItems: [
 		{
 			label: "Home",
 			href: "/",
 		},
 		{
-			label: "Men",
-			href: "/men",
+			label: "About Us",
+			href: "#about-card",
 		},
 		{
-			label: "Accessories",
-			href: "/accessories",
-		},
-		{
-			label: "Sales",
-			href: "/sales",
+			label: "Where to Buy",
+			href: "#retailer-banner",
 		},
 	],
 	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "Home",
+			href: "#",
 		},
 		{
-			label: "Dashboard",
-			href: "/dashboard",
+			label: "About Us",
+			href: "#about-card",
 		},
 		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
+			label: "Where to Buy",
+			href: "#retailer-banner",
 		},
 	],
 	links: {
 		instagram: "https://instagram.com",
 		twitter: "https://twitter.com/",
 		tiktok: "https://tiktok.com",
-		newcontent: "/",
-		newsletter: "/",
 	},
 };
