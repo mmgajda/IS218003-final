@@ -1,16 +1,3 @@
-
-
-// interface ButtonComponentProps {
-//     scrollToForm: () => void;
-// }
-
-// const CTAButton = ({ scrollToForm }: { scrollToForm: () => void }) => {
-//     return (
-//         <Button onClick={scrollToForm} id="cta" color="primary">
-//             Be the First to Explore
-//         </Button>
-//     );
-// };
 'use client';
 import { Button } from '@nextui-org/react';
 import React from 'react';
